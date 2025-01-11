@@ -2,4 +2,122 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: var(--basic-font-size);
+  font-family: var(--font-family), sans-serif;
 }
+
+/* блок описывающиц шапку старницы */
+
+.header {
+  display: grid;
+  padding: 10px;
+  justify-items: end;
+  gap: 55px;
+  background-image: var(--bg-image);
+  background-position: center;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  background-color: inherit;
+  color: var(--text-color-light);
+}
+
+.title {
+  font-size: var(--title-font-size);
+  color: var(--text-color-title);
+  line-height: 95.7px;
+}
+
+.header__title {
+  text-shadow: 4px 4px 0 var(--shudow-text-color);
+}
+
+.header__text {
+  background-color: var(--bg-text-color);
+  color: var(--text-color-dark);
+}
+
+/* Конец блока для шапки станицы */
+
+
+/* Блок для первого основного блока (текстового) страницы */
+
+.subject-education {
+  display: grid;
+  gap: 50px;
+  padding: 0 10px;
+  padding-bottom: 50px;
+}
+
+.subject-education > div {
+  display: grid;
+  gap: 20px;
+}
+
+.subject-education__title-block {
+  color: var(--text-color-light);
+}
+
+.subject-education__title-paragraph {
+  background-color: var(--bg-text-color);
+  color: var(--text-color-dark);
+  margin-bottom: 10px;
+}
+
+.subject-education__title-subparagraph {
+  background-color: var(--bg-text-color);
+  color: var(--text-color-dark);
+}
+
+/* Конец первого основного блока страницы */
+
+
+/* Далее идет код для базовой секции с картинками */
+
+.subject-illustration {
+  display: grid;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.subject-illustration__title {
+  background-color: var(--bg-text-color);
+  color: var(--text-color-dark);
+}
+
+.subject-illustration__gallery {
+  max-inline-size: 100%;
+  grid-template-columns: inherit;
+}
+
+.subject-illustration__image {
+  max-inline-size: 100%;
+  block-size: 100%;
+  max-block-size: 100%;
+  object-fit: cover;
+}
+
+/* Конец блока кода для секции с картинками */
+
+
+/* Блок для подвала страницы */
+
+.footer {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  min-block-size: 668px;
+}
+
+.footer__title {
+  text-shadow: 2px 2px 0 var(--shudow-text-color);
+}
+
+/* Конец блока для подвала страницы  */

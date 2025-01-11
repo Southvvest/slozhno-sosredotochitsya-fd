@@ -40,3 +40,11 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+figure {
+  margin-block-start: 0px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin: 0;
+}
