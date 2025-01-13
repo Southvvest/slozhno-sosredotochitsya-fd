@@ -4,7 +4,7 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-size: var(--basic-font-size);
+  font-size: var(--font-size-basic);
   font-family: var(--font-family), sans-serif;
   background-image: var(--bg-image);
   background-position: center;
@@ -19,17 +19,7 @@
   padding-block: 10px;
   padding-inline: 10px;
   justify-items: end;
-  gap: 40px;
-}
-
-.header::after {
-  content: "";
-  width: 25px;
-  height: 25px;
-  border-width: 0px 0px 1px 1px;
-  border-style: solid;
-  border-color: var(--decoration-color);
-  justify-self: start;
+  gap: 38px;
 }
 
 .header::before {
@@ -40,6 +30,17 @@
   border-style: solid;
   border-color: var(--decoration-color);
   justify-self: end;
+}
+
+.header::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-width: 0px 0px 1px 1px;
+  border-style: solid;
+  border-color: var(--decoration-color);
+  justify-self: start;
+  padding-block-end: 10px;
 }
 
 .header_decoration{
@@ -90,14 +91,14 @@
 }
 
 .title {
-  font-size: var(--title-font-size);
+  font-size: var(--font-size-title);
   color: var(--text-color-title);
-  line-height: 95.7px;
+  line-height: var(--font-line-height-title);
 }
 
 .header__title {
   text-shadow: 4px 4px 0 var(--shudow-text-color);
-  padding-block-start: 25px;
+  padding-block-start: 30px;
   padding-block-end: 15px;
 }
 
@@ -105,42 +106,75 @@
   background-color: var(--bg-text-color);
   color: var(--text-color-dark);
   font-family: var(--font-family) sans-serif;
-  font-size: var(--basic-font-size);
+  font-size: var(--font-size-basic);
 }
 
 /* Конец блока для шапки станицы */
 
 
-/* Блок для первого основного блока (текстового) страницы */
+/* Блок для текстовых секций основного блока */
 
-.subject-education {
+.main {
   display: grid;
   gap: 50px;
-  padding: 0 10px;
-  padding-bottom: 50px;
+  padding-block-start: 38px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
 }
 
-.subject-education > div {
+.subject-education {
   display: grid;
   gap: 20px;
 }
 
 .subject-education__title-block {
   color: var(--text-color-light);
+  font-size: inherit;
 }
 
 .subject-education__title-paragraph {
   background-color: var(--bg-text-color);
   color: var(--text-color-dark);
   margin-block-end: 10px;
+  font-size: inherit;
 }
 
 .subject-education__title-subparagraph {
   background-color: var(--bg-text-color);
   color: var(--text-color-dark);
+  font-size: inherit;
 }
 
-/* Конец первого основного блока страницы */
+.subject-education_text {
+  line-height: var(--font-line-height-basic);
+}
+
+.subject-education_link {
+  text-shadow: 2px 1px 0 var(--shudow-text-color);
+  text-decoration: none;
+}
+
+.subject-education__paragraph-block {
+  display: grid;
+  gap: 20px;
+}
+
+.subject-education__subparagraph-block {
+  display: grid;
+  gap: 10px;
+}
+
+/* .subject-education:has(.subject-education__title-subparagraph) {
+  gap: 10px;
+}
+
+.subject-education__title-block ~ .subject-education__title-paragraph {
+  margin-block-start: 10px;
+  margin-inline-end: 0px;
+} */
+
+
+/* Конец стилей текстовых секций основного блока */
 
 
 /* Далее идет код для базовой секции с картинками */
@@ -148,7 +182,6 @@
 .subject-illustration {
   display: grid;
   gap: 10px;
-  padding: 0 10px;
 }
 
 .subject-illustration__title {
@@ -178,11 +211,67 @@
   align-content: center;
   justify-content: center;
   min-block-size: 668px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer__title {
   text-shadow: 2px 2px 0 var(--shudow-text-color);
   font-weight: bold;
+  align-self: center;
+}
+
+.footer::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: var(--decoration-color);
+  align-self: end;
+  margin-inline-end: 10px;
+  margin-block-start: 10px;
+}
+
+.footer::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-width: 0px 0px 1px 1px;
+  border-style: solid;
+  border-color: var(--decoration-color);
+  align-self: start;
+  margin-inline-start: 10px;
+  margin-block-end: 10px;
 }
 
 /* Конец блока для подвала страницы  */
+
+
+/* Далее идут стили различных состояния элементов */
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--decoration-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-start: 0px;
+  border-inline-start: 0px;
+  border-inline-end: 0px;
+  border-block-end: 1px;
+  border-style: solid;
+  border-color: var(--decoration-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px;
+  border-style: solid;
+  border-color: var(--decoration-color-transparent);
+}
+
+/* Конец стилей состояния элементов */

@@ -5,15 +5,18 @@
 
 :root {
   --bg-color: #000028;
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-text-color: #FF0070;
   --text-color-title: #DB00FF;
+  --text-color: #F1B2CE;
   --text-color-light: #FF0070;
   --text-color-dark: #000028;
-  --text-color: #F1B2CE;
-  --bg-text-color: #FF0070;
   --shudow-text-color: #FF0070;
   --decoration-color: #FF0070;
-  --title-font-size: 116px;
-  --basic-font-size: 18px;
-  --bg-image: url(../images/cover-image-dark.png);
+  --decoration-color-transparent: #ff007066;  
   --font-family: 'IBM Plex mono';
+  --font-size-basic: 18px;
+  --font-size-title: 116px;
+  --font-line-height-basic: 23.4px;
+  --font-line-height-title: 95.7px;
 }
