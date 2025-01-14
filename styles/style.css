@@ -117,7 +117,8 @@
 .main {
   display: grid;
   gap: 50px;
-  padding-block-start: 38px;
+  padding-block-start: 40px;
+  padding-block-end: 40px;
   padding-inline-start: 10px;
   padding-inline-end: 10px;
 }
@@ -132,10 +133,24 @@
   font-size: inherit;
 }
 
+.subject-education__section-block {
+  display: grid;
+  gap: 20px;
+}
+
+.subject-education__paragraph-block {
+  display: grid;
+  gap: 10px;
+}
+
+.subject-education__subparagraph-block {
+  display: grid;
+  gap: 10px;
+}
+
 .subject-education__title-paragraph {
   background-color: var(--bg-text-color);
   color: var(--text-color-dark);
-  margin-block-end: 10px;
   font-size: inherit;
 }
 
@@ -154,26 +169,6 @@
   text-decoration: none;
 }
 
-.subject-education__paragraph-block {
-  display: grid;
-  gap: 20px;
-}
-
-.subject-education__subparagraph-block {
-  display: grid;
-  gap: 10px;
-}
-
-/* .subject-education:has(.subject-education__title-subparagraph) {
-  gap: 10px;
-}
-
-.subject-education__title-block ~ .subject-education__title-paragraph {
-  margin-block-start: 10px;
-  margin-inline-end: 0px;
-} */
-
-
 /* Конец стилей текстовых секций основного блока */
 
 
@@ -182,14 +177,18 @@
 .subject-illustration {
   display: grid;
   gap: 10px;
+  min-block-size: 1400px;
 }
 
 .subject-illustration__title {
   background-color: var(--bg-text-color);
   color: var(--text-color-dark);
+  font-size: var(--font-size-basic);
 }
 
 .subject-illustration__gallery {
+  display: grid;
+  gap: 10px;
   max-inline-size: 100%;
   grid-template-columns: inherit;
 }
@@ -272,6 +271,25 @@
   border: 1px;
   border-style: solid;
   border-color: var(--decoration-color-transparent);
+}
+
+a:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  border: 1px;
+  border-style: solid;
+}
+
+a:hover {
+  text-decoration-line: underline;
+  text-underline-position: from-font;
+  /* border-block-start: 0px;
+  border-inline-start: 0px;
+  border-inline-end: 0px;
+  border-block-end: 1.5px;
+  border-style: solid; */
 }
 
 /* Конец стилей состояния элементов */
