@@ -16,7 +16,7 @@
   --decoration-color-transparent: #ff007066;  
   --font-family: 'IBM Plex mono';
   --font-size-basic: 18px;
-  --font-size-title: 116px;
+  --font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --font-line-height-basic: 23.4px;
   --font-line-height-title: 95.7px;
 }
