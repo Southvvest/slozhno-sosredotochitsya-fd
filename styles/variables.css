@@ -13,7 +13,7 @@
   --text-color-dark: #000028;
   --shudow-text-color: #FF0070;
   --decoration-color: #FF0070;
-  --decoration-color-transparent: #ff007066;  
+  --decoration-color-transparent: #ff007066;
   --font-family: 'IBM Plex mono';
   --font-size-basic: 18px;
   --font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
