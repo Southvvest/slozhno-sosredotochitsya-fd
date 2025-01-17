@@ -126,9 +126,6 @@
 
 .subject-education_text {
   font-size: inherit;
-}
-
-.subject-education_text {
   line-height: var(--font-line-height-basic);
 }
 
@@ -429,6 +426,10 @@ a:hover {
 
   .subject-education {
     grid-template-columns: 1fr 66%;
+  }
+
+  .subject-education_different-style {
+    grid-template-columns: 1fr;
   }
 
   .subject-education_different-style > .subject-education__section-block {
