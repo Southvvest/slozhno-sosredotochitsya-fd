@@ -177,10 +177,7 @@
 .footer {
   min-block-size: 668px;
   block-size: 100vh;
-  /* min-inline-size: 100%;
-  max-inline-size: 100%; */
   display: grid;
-  /* justify-self: center; */
   padding-inline-start: 10px;
   padding-inline-end: 10px;
   padding-block-start: 10px;
@@ -363,7 +360,6 @@ a:hover {
 
   .subject-illustration__gallery {
     gap: 20px;
-    /* max-block-size: 780px; */
     grid-template-columns: 1fr 230px 1fr;
     grid-template-rows: 192px 230px 318px;
   }
@@ -444,7 +440,6 @@ a:hover {
 
   .subject-illustration__gallery {
     gap: 20px;
-    /* max-block-size: 1050px; */
     grid-template-columns: 1fr 315px 1fr;
     grid-template-rows: 260px 315px 433px;
   }
