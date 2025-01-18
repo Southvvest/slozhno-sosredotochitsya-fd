@@ -38,6 +38,13 @@
     --decoration-color: #353430;
     --decoration-color-transparent: #32312D66;
   }
+  .header_decoration {
+    display: none;
+  }
+}
+
+.theme-dark .header_decoration {
+  display: flex;
 }
 
 .theme-light .page {
